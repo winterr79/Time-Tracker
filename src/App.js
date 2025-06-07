@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header.js";
+// import ErrorBoundary from "./components/ErrorBoundary.js";
 
 function App() {
+  // const name = "Harish";
+  // const x = 0;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      {/* <Header title = "Hello" /> */}
+      <Header title = {1} />
+      {/* <ErrorBoundary fallback={<h2>Header failed to load</h2>}>
+        <Header />
+      </ErrorBoundary> */}
+      {/* <h1>Hello From React</h1> */}
+      {/* <h2>Hello {name} {x ? "How are you!" : "Go to hell"}</h2> */}
     </div>
+    // <>
+    //   <h1>Hello From React</h1>
+    //   <h2>Hello</h2>
+    // </>
   );
 }
 
