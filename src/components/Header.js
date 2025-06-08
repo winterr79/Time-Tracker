@@ -15,10 +15,10 @@ import Button from './Button';
 //     title: "Task Tracker",
 // };
 
-const Header = ({title}) => {
-  const onClick = () => {
-    console.log("Click");
-  };
+const Header = ({title, onAdd, showAddTask}) => {
+  // const onClick = () => {
+  //   console.log("Click");
+  // };
 
   return (
     <header className= "header">
@@ -33,9 +33,9 @@ const Header = ({title}) => {
         <Button color= "red" text= "Hello 3"/> */}
         {/* This teaches we can reuse the component with different props */}
         <Button
-          color= "green"
-          text= "Add"
-          onClick = {onClick}
+          color= {showAddTask ? "red" : "green"}
+          text= {showAddTask ? "Close" : "Add"}
+          onClick = {onAdd}
         />
     </header>
   );

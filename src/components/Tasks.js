@@ -58,10 +58,11 @@ const Tasks = ({tasks, onDelete, onToggle}) => {
         // setTasks([...tasks, {}]),
         <>
             {/* <button onClick={addTask}>Add Task</button> */}
-            {tasks.map((task) => (
+            {tasks.map((task, index) => (
                 // <h3 key= {task.id}>{task.text}</h3>
                 <Task
-                    key={task.id}
+                    // key={task.id}
+                    key={index}
                     task={task}
                     onDelete={onDelete}
                     onToggle= {onToggle}
