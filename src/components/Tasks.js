@@ -23,7 +23,7 @@ import Task from "./Task.js";
 
 // import {useState} from "react";
 
-const Tasks = ({tasks, onDelete}) => {
+const Tasks = ({tasks, onDelete, onToggle}) => {
     // const [tasks, setTasks] = useState([
     //     {
     //         id: 1,
@@ -64,6 +64,7 @@ const Tasks = ({tasks, onDelete}) => {
                     key={task.id}
                     task={task}
                     onDelete={onDelete}
+                    onToggle= {onToggle}
                 />
             ))}
         </>
